@@ -3,7 +3,7 @@ const products = [
     //---------Laptops---------
     {
         id:1,
-        name: "ASUS Vivobook 15 (2025) with Office 2024 + M365 Basic* Intel Core i3 13th Gen 1315U",
+        name: "ASUS Vivobook 15 (2025)",
         price: "₹37,761",
         image: "../img/products/pn11.png",
         smallimgs: [
@@ -22,7 +22,7 @@ const products = [
     },
     {
         id:2,
-        name: "ASUS Vivobook S14 (2025) with Office 2024 + M365 Basic*, Metallic Design, H-Series Intel Core i5 13th Gen 13420H",
+        name: "ASUS Vivobook S14 (2025)",
         price: "₹58,990",
         image: "../img/products/pn61.png",
         smallimgs: [
@@ -42,7 +42,7 @@ const products = [
     },
     {
         id:3,
-        name: "ASUS Vivobook S14 (2025) with Office 2024 + M365 Basic*, Metallic Design, Copilot+ PC Qualcomm Snapdragon X",
+        name: "ASUS Vivobook S14 (2025)",
         price: "₹67,990",
         image: "../img/products/pn71.png",
         smallimgs: [
@@ -62,7 +62,7 @@ const products = [
     },
     {
         id:4,
-        name: "ASUS Vivobook 16X (2025) for Creator with Office 2024 + M365 Basic, Intel Core i5 13th Gen 13420H",
+        name: "ASUS Vivobook 16X (2025)",
         price: "₹64,999",
         image: "../img/products/pn81.png",
         smallimgs: [
@@ -184,7 +184,7 @@ const products = [
     },
     {
         id:10,
-        name: "Edge Ceramic Quartz in Midnight Gold with Diamonds and Black Dial Analog Watch - For Men NT1696KC02",
+        name: "Edge Ceramic Quartz...",
         price: "₹42,995",
         image: "../img/products/w2.png",
         smallimgs: [
@@ -204,7 +204,7 @@ const products = [
     },
     {
         id:11,
-        name: "Chronograph Automatic Swiss Made Black Dial Analog Watch - For Men H1886CHATPN",
+        name: "Chronograph Automatic Swiss...",
         price: "₹1,42,489",
         image: "../img/products/w3.png",
         smallimgs: [
@@ -245,7 +245,7 @@ const products = [
     //---------Watches---------
     {
         id:13,
-        name: "Google Pixel Buds Pro 2 Bluetooth (Porcelain, True Wireless)",
+        name: "Google Pixel Buds Pro 2 Bluetooth",
         price: "₹20,600",
         image: "../img/products/e1.png",
         smallimgs: [
@@ -265,7 +265,7 @@ const products = [
     },
     {
         id:14,
-        name: "JBL Live Beam 3, Hi-Res LDAC Audio ANC TWS, SmartCase,48H Runtime, Wireless Charging Bluetooth (Black, True Wireless)",
+        name: "JBL Live Beam 3",
         price: "₹11,990",
         image: "../img/products/e2.png",
         smallimgs: [
@@ -285,7 +285,7 @@ const products = [
     },
     {
         id:15,
-        name: "Skullcandy Indy ANC Bluetooth (Chill Grey, True Wireless)",
+        name: "Skullcandy Indy ANC Bluetooth",
         price: "₹19,000",
         image: "../img/products/e3.png",
         smallimgs: [
@@ -305,7 +305,7 @@ const products = [
     },
     {
         id:16,
-        name: "JBL Tune Flex TWS with ANC, Customizable Eartips, 32H Playtime, JBL App Bluetooth (White, True Wireless)",
+        name: "JBL Tune Flex TWS with ANC",
         price: "₹8,999",
         image: "../img/products/e4.png",
         smallimgs: [
@@ -326,42 +326,194 @@ const products = [
 
 ]
 
-//Prducts.js
+// ===========================
+// Helpers (currency + storage)
+// ===========================
+const parseINR = (val) =>
+  typeof val === "number" ? val : parseInt(String(val).replace(/[^\d]/g, "")) || 0;
+const formatINR = (num) => "₹" + Number(num || 0).toLocaleString("en-IN");
 
-let productId = new URLSearchParams(window.location.search).get('id');
-let product = products[productId-1];
+const getCart = () => JSON.parse(localStorage.getItem("cart")) || [];
+const setCart = (cart) => localStorage.setItem("cart", JSON.stringify(cart));
 
-// Set main image
-document.getElementById("MainImg").src = product.image;
+// ===========================
+// PRODUCT PAGE (sproduct.html)
+// ===========================
+function initProductPage() {
+  const mainImgEl = document.getElementById("MainImg");
+  if (!mainImgEl) return; // Not on product page
 
-// Set name, price, description
-document.getElementById("product-name").textContent = product.name;
-document.getElementById("product-price").textContent = product.price;
-document.getElementById("product-desc").textContent = product.desc;
+  // URL se id
+  const productId = new URLSearchParams(window.location.search).get("id");
+  // id match karo (safe fallback: first product)
+  const product =
+    products.find((p) => String(p.id) === String(productId)) || products[0];
 
-// Add small images
-let smallImgGroup = document.getElementById("small-img-group");
-product.smallimgs.forEach(imgSrc => {
-    let div = document.createElement("div");
-    div.classList.add("small-img-col");
+  // Basic details
+  mainImgEl.src = product.image;
+  document.getElementById("product-name").textContent = product.name;
+  document.getElementById("product-price").textContent = product.price;
+  document.getElementById("product-desc").textContent = product.desc;
 
-    let img = document.createElement("img");
-    img.src = imgSrc;
-    img.classList.add("small-img");
+  // Small images
+  const smallImgGroup = document.getElementById("small-img-group");
+  smallImgGroup.innerHTML = "";
+  product.smallimgs.forEach((src) => {
+    const col = document.createElement("div");
+    col.className = "small-img-col";
+    const img = document.createElement("img");
+    img.src = src;
+    img.className = "small-img";
+    img.addEventListener("click", () => (mainImgEl.src = src));
+    col.appendChild(img);
+    smallImgGroup.appendChild(col);
+  });
 
-    img.addEventListener("click", () => {
-        document.getElementById("MainImg").src = imgSrc;
+  // Variants
+  const variantSelect = document.getElementById("variant-select");
+  if (variantSelect) {
+    variantSelect.innerHTML = "";
+    product.variants.forEach((v) => {
+      const opt = document.createElement("option");
+      opt.textContent = v;
+      opt.value = v;
+      variantSelect.appendChild(opt);
+    });
+  }
+
+  // Add to Cart
+  const addBtn = document.getElementById("add-to-cart-btn");
+  const qtyInput = document.getElementById("quantity-input");
+
+  addBtn.addEventListener("click", () => {
+    const qty = Math.max(1, parseInt(qtyInput.value) || 1);
+    const selectedVariant =
+      variantSelect && variantSelect.value !== "Variants"
+        ? variantSelect.value
+        : null;
+
+    const cart = getCart();
+
+    // same product + same variant ko merge karo
+    const existing = cart.find(
+      (item) => item.id === product.id && item.variant === selectedVariant
+    );
+
+    if (existing) {
+      existing.quantity += qty;
+    } else {
+      cart.push({
+        id: product.id,
+        name: product.name,
+        image: product.image,
+        // Store numeric price for math + a display string if needed
+        price: parseINR(product.price),
+        priceDisplay: product.price,
+        quantity: qty,
+        variant: selectedVariant // may be null
+      });
+    }
+
+    setCart(cart);
+    alert("Added to cart!");
+    // Optional: redirect to cart
+    // window.location.href = "cart.html";
+  });
+}
+
+// ===========================
+// CART PAGE (cart.html)
+// ===========================
+function initCartPage() {
+  const cartSection = document.getElementById("cart");
+  if (!cartSection) return; // Not on cart page
+
+  const tbody = cartSection.querySelector("tbody");
+
+  function renderCart() {
+    const cart = getCart();
+    tbody.innerHTML = "";
+
+    if (cart.length === 0) {
+      tbody.innerHTML =
+        '<tr><td colspan="6" style="text-align:center; opacity:.7;">Your cart is empty</td></tr>';
+      updateTotals();
+      return;
+    }
+
+    cart.forEach((item, index) => {
+      const subtotal = item.price * item.quantity;
+
+      const tr = document.createElement("tr");
+      tr.className = "cart-item";
+      tr.innerHTML = `
+        <td><a href="#" class="remove-btn" data-index="${index}"><i class="far fa-times-circle"></i></a></td>
+        <td><img src="${item.image}" class="pro-img" alt=""></td>
+        <td class="pro-name">
+          ${item.name}
+          ${item.variant ? `<div style="font-size:12px;opacity:.7;">Variant: ${item.variant}</div>` : ""}
+        </td>
+        <td class="price">${item.priceDisplay || formatINR(item.price)}</td>
+        <td><input type="number" class="quantity" min="1" value="${item.quantity}" data-index="${index}"></td>
+        <td class="subtotal">${formatINR(subtotal)}</td>
+      `;
+      tbody.appendChild(tr);
     });
 
-    div.appendChild(img);
-    smallImgGroup.appendChild(div);
+    updateTotals();
+  }
 
-});
+  function updateTotals() {
+    const cart = getCart();
+    const total = cart.reduce((sum, it) => sum + it.price * it.quantity, 0);
+    const subCell = document.querySelector(
+      "#subtotal table tr:nth-child(1) td:nth-child(2)"
+    );
+    const totalCell = document.querySelector(
+      "#subtotal table tr:nth-child(3) td:nth-child(2)"
+    );
+    if (subCell) subCell.textContent = formatINR(total);
+    if (totalCell) totalCell.textContent = formatINR(total);
+  }
 
-// Add variants
-let variantSelect = document.getElementById("variant-select");
-product.variants.forEach(variant => {
-    let option = document.createElement("option");
-    option.textContent = variant;
-    variantSelect.appendChild(option);
-});
+  // Quantity change (event delegation)
+  tbody.addEventListener("input", (e) => {
+    if (e.target.classList.contains("quantity")) {
+      const idx = parseInt(e.target.getAttribute("data-index"));
+      const val = Math.max(1, parseInt(e.target.value) || 1);
+      const cart = getCart();
+      if (cart[idx]) {
+        cart[idx].quantity = val;
+        setCart(cart);
+        renderCart();
+      }
+    }
+  });
+
+  // Remove item
+  tbody.addEventListener("click", (e) => {
+    const btn = e.target.closest(".remove-btn");
+    if (!btn) return;
+    e.preventDefault();
+    const idx = parseInt(btn.getAttribute("data-index"));
+    const cart = getCart();
+    cart.splice(idx, 1);
+    setCart(cart);
+    renderCart();
+  });
+
+  renderCart();
+}
+
+// ===========================
+// Init (both pages supported)
+// ===========================
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => {
+    initProductPage();
+    initCartPage();
+  });
+} else {
+  initProductPage();
+  initCartPage();
+}
