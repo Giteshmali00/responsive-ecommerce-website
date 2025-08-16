@@ -5,7 +5,7 @@ const products = [
         id:1,
         name: "ASUS Vivobook 15 (2025)",
         price: "₹37,761",
-        image: "../img/products/pn11.png",
+        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\pn11.png",
         smallimgs: [
             "../img/products/pn11.png",
             "../img/products/pn12.png",
@@ -24,7 +24,7 @@ const products = [
         id:2,
         name: "ASUS Vivobook S14 (2025)",
         price: "₹58,990",
-        image: "../img/products/pn61.png",
+        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\pn61.png",
         smallimgs: [
             "../img/products/pn61.png",
             "../img/products/pn62.png",
@@ -44,7 +44,7 @@ const products = [
         id:3,
         name: "ASUS Vivobook S14 (2025)",
         price: "₹67,990",
-        image: "../img/products/pn71.png",
+        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\pn71.png",
         smallimgs: [
             "../img/products/pn71.png",
             "../img/products/pn72.png",
@@ -64,7 +64,7 @@ const products = [
         id:4,
         name: "ASUS Vivobook 16X (2025)",
         price: "₹64,999",
-        image: "../img/products/pn81.png",
+        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\pn81.png",
         smallimgs: [
             "../img/products/pn81.png",
             "../img/products/pn82.png",
@@ -85,7 +85,7 @@ const products = [
         id:5,
         name: "Apple iPhone 16 (White, 128 GB)",
         price: "₹69,999",
-        image: "../img/products/ph1.png",
+        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\ph1.png",
         smallimgs: [
             "../img/products/ph1.png",
             "../img/products/ph11.png",
@@ -105,7 +105,7 @@ const products = [
         id:6,
         name: "vivo X200 5G (Cosmos Black, 256 GB) (12 GB RAM)",
         price: "₹65,999",
-        image: "../img/products/ph2.png",
+        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\ph2.png",
         smallimgs: [
             "../img/products/ph2.png",
             "../img/products/ph21.png",
@@ -125,7 +125,7 @@ const products = [
         id:7,
         name: "realme GT 7 Pro (Mars Orange, 512 GB) (16 GB RAM)",
         price: "₹53,900",
-        image: "../img/products/ph3.png",
+        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\ph3.png",
         smallimgs: [
             "../img/products/ph3.png",
             "../img/products/ph31.png",
@@ -145,7 +145,7 @@ const products = [
         id:8,
         name: "IQOO 13 5G (Nardo Grey, 512 GB) (16 GB RAM)",
         price: "₹59,999",
-        image: "../img/products/ph4.png",
+        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\ph4.png",
         smallimgs: [
             "../img/products/ph1.png",
             "../img/products/ph41.png",
@@ -166,7 +166,7 @@ const products = [
         id:9,
         name: "Analog Watch - For Men NJ0151-88M",
         price: "₹35,009",
-        image: "../img/products/w1.png",
+        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\w1.png",
         smallimgs: [
             "../img/products/w1.png",
             "../img/products/w11.png",
@@ -186,7 +186,7 @@ const products = [
         id:10,
         name: "Edge Ceramic Quartz...",
         price: "₹42,995",
-        image: "../img/products/w2.png",
+        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\w2.png",
         smallimgs: [
             "../img/products/w2png",
             "../img/products/w21.png",
@@ -206,7 +206,7 @@ const products = [
         id:11,
         name: "Chronograph Automatic Swiss...",
         price: "₹1,42,489",
-        image: "../img/products/w3.png",
+        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\w3.png",
         smallimgs: [
             "../img/products/w3.png",
             "../img/products/w31.png",
@@ -226,7 +226,7 @@ const products = [
         id:12,
         name: "Analog Watch - For Men SMWGI0002284",
         price: "₹59,990",
-        image: "../img/products/w4.png",
+        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\w4.png",
         smallimgs: [
             "../img/products/w4.png",
             "../img/products/w41.png",
@@ -247,7 +247,7 @@ const products = [
         id:13,
         name: "Google Pixel Buds Pro 2 Bluetooth",
         price: "₹20,600",
-        image: "../img/products/e1.png",
+        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\e1.png",
         smallimgs: [
             "../img/products/e1.png",
             "../img/products/e11.png",
@@ -267,7 +267,7 @@ const products = [
         id:14,
         name: "JBL Live Beam 3",
         price: "₹11,990",
-        image: "../img/products/e2.png",
+        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\e2.png",
         smallimgs: [
             "../img/products/e2.png",
             "../img/products/e21.png",
@@ -287,7 +287,7 @@ const products = [
         id:15,
         name: "Skullcandy Indy ANC Bluetooth",
         price: "₹19,000",
-        image: "../img/products/e3.png",
+        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\e3.png",
         smallimgs: [
             "../img/products/e3.png",
             "../img/products/e31.png",
@@ -307,7 +307,7 @@ const products = [
         id:16,
         name: "JBL Tune Flex TWS with ANC",
         price: "₹8,999",
-        image: "../img/products/e4.png",
+        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\e4.png",
         smallimgs: [
             "../img/products/e4.png",
             "../img/products/e41.png",
