@@ -5,7 +5,7 @@ const products = [
         id:1,
         name: "ASUS Vivobook 15 (2025)",
         price: "₹37,761",
-        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\pn11.png",
+        image: "../img/products/pn11.png",
         smallimgs: [
             "../img/products/pn11.png",
             "../img/products/pn12.png",
@@ -24,7 +24,7 @@ const products = [
         id:2,
         name: "ASUS Vivobook S14 (2025)",
         price: "₹58,990",
-        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\pn61.png",
+        image: "../img/products/pn61.png",
         smallimgs: [
             "../img/products/pn61.png",
             "../img/products/pn62.png",
@@ -44,7 +44,7 @@ const products = [
         id:3,
         name: "ASUS Vivobook S14 (2025)",
         price: "₹67,990",
-        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\pn71.png",
+        image: "../img/products/pn71.png",
         smallimgs: [
             "../img/products/pn71.png",
             "../img/products/pn72.png",
@@ -64,7 +64,7 @@ const products = [
         id:4,
         name: "ASUS Vivobook 16X (2025)",
         price: "₹64,999",
-        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\pn81.png",
+        image: "../img/products/pn81.png",
         smallimgs: [
             "../img/products/pn81.png",
             "../img/products/pn82.png",
@@ -85,7 +85,7 @@ const products = [
         id:5,
         name: "Apple iPhone 16 (White, 128 GB)",
         price: "₹69,999",
-        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\ph1.png",
+        image: "../img/products/ph1.png",
         smallimgs: [
             "../img/products/ph1.png",
             "../img/products/ph11.png",
@@ -105,7 +105,7 @@ const products = [
         id:6,
         name: "vivo X200 5G (Cosmos Black, 256 GB) (12 GB RAM)",
         price: "₹65,999",
-        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\ph2.png",
+        image: "../img/products/ph2.png",
         smallimgs: [
             "../img/products/ph2.png",
             "../img/products/ph21.png",
@@ -125,7 +125,7 @@ const products = [
         id:7,
         name: "realme GT 7 Pro (Mars Orange, 512 GB) (16 GB RAM)",
         price: "₹53,900",
-        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\ph3.png",
+        image: "../img/products/ph3.png",
         smallimgs: [
             "../img/products/ph3.png",
             "../img/products/ph31.png",
@@ -145,7 +145,7 @@ const products = [
         id:8,
         name: "IQOO 13 5G (Nardo Grey, 512 GB) (16 GB RAM)",
         price: "₹59,999",
-        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\ph4.png",
+        image: "../img/products/ph1.png",
         smallimgs: [
             "../img/products/ph1.png",
             "../img/products/ph41.png",
@@ -166,7 +166,7 @@ const products = [
         id:9,
         name: "Analog Watch - For Men NJ0151-88M",
         price: "₹35,009",
-        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\w1.png",
+        image: "../img/products/w1.png",
         smallimgs: [
             "../img/products/w1.png",
             "../img/products/w11.png",
@@ -186,7 +186,7 @@ const products = [
         id:10,
         name: "Edge Ceramic Quartz...",
         price: "₹42,995",
-        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\w2.png",
+        image: "../img/products/w2png",
         smallimgs: [
             "../img/products/w2png",
             "../img/products/w21.png",
@@ -206,7 +206,7 @@ const products = [
         id:11,
         name: "Chronograph Automatic Swiss...",
         price: "₹1,42,489",
-        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\w3.png",
+        image: "../img/products/w3.png",
         smallimgs: [
             "../img/products/w3.png",
             "../img/products/w31.png",
@@ -226,7 +226,7 @@ const products = [
         id:12,
         name: "Analog Watch - For Men SMWGI0002284",
         price: "₹59,990",
-        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\w4.png",
+        image: "../img/products/w4.png",
         smallimgs: [
             "../img/products/w4.png",
             "../img/products/w41.png",
@@ -247,7 +247,7 @@ const products = [
         id:13,
         name: "Google Pixel Buds Pro 2 Bluetooth",
         price: "₹20,600",
-        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\e1.png",
+        image: "../img/products/e1.png",
         smallimgs: [
             "../img/products/e1.png",
             "../img/products/e11.png",
@@ -267,7 +267,7 @@ const products = [
         id:14,
         name: "JBL Live Beam 3",
         price: "₹11,990",
-        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\e2.png",
+        image: "../img/products/e2.png",
         smallimgs: [
             "../img/products/e2.png",
             "../img/products/e21.png",
@@ -287,7 +287,7 @@ const products = [
         id:15,
         name: "Skullcandy Indy ANC Bluetooth",
         price: "₹19,000",
-        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\e3.png",
+        image: "../img/products/e3.png",
         smallimgs: [
             "../img/products/e3.png",
             "../img/products/e31.png",
@@ -307,7 +307,7 @@ const products = [
         id:16,
         name: "JBL Tune Flex TWS with ANC",
         price: "₹8,999",
-        image: "C:\Users\SHUBHAM MALI\Desktop\Web Deveopment\img\products\e4.png",
+        image: "../img/products/e4.png",
         smallimgs: [
             "../img/products/e4.png",
             "../img/products/e41.png",
@@ -326,194 +326,44 @@ const products = [
 
 ]
 
-// ===========================
-// Helpers (currency + storage)
-// ===========================
-const parseINR = (val) =>
-  typeof val === "number" ? val : parseInt(String(val).replace(/[^\d]/g, "")) || 0;
-const formatINR = (num) => "₹" + Number(num || 0).toLocaleString("en-IN");
 
-const getCart = () => JSON.parse(localStorage.getItem("cart")) || [];
-const setCart = (cart) => localStorage.setItem("cart", JSON.stringify(cart));
+//Prducts.js
 
-// ===========================
-// PRODUCT PAGE (sproduct.html)
-// ===========================
-function initProductPage() {
-  const mainImgEl = document.getElementById("MainImg");
-  if (!mainImgEl) return; // Not on product page
+let productId = new URLSearchParams(window.location.search).get('id');
+let product = products[productId-1];
 
-  // URL se id
-  const productId = new URLSearchParams(window.location.search).get("id");
-  // id match karo (safe fallback: first product)
-  const product =
-    products.find((p) => String(p.id) === String(productId)) || products[0];
+// Set main image
+document.getElementById("MainImg").src = product.image;
 
-  // Basic details
-  mainImgEl.src = product.image;
-  document.getElementById("product-name").textContent = product.name;
-  document.getElementById("product-price").textContent = product.price;
-  document.getElementById("product-desc").textContent = product.desc;
+// Set name, price, description
+document.getElementById("product-name").textContent = product.name;
+document.getElementById("product-price").textContent = product.price;
+document.getElementById("product-desc").textContent = product.desc;
 
-  // Small images
-  const smallImgGroup = document.getElementById("small-img-group");
-  smallImgGroup.innerHTML = "";
-  product.smallimgs.forEach((src) => {
-    const col = document.createElement("div");
-    col.className = "small-img-col";
-    const img = document.createElement("img");
-    img.src = src;
-    img.className = "small-img";
-    img.addEventListener("click", () => (mainImgEl.src = src));
-    col.appendChild(img);
-    smallImgGroup.appendChild(col);
-  });
+// Add small images
+let smallImgGroup = document.getElementById("small-img-group");
+product.smallimgs.forEach(imgSrc => {
+    let div = document.createElement("div");
+    div.classList.add("small-img-col");
 
-  // Variants
-  const variantSelect = document.getElementById("variant-select");
-  if (variantSelect) {
-    variantSelect.innerHTML = "";
-    product.variants.forEach((v) => {
-      const opt = document.createElement("option");
-      opt.textContent = v;
-      opt.value = v;
-      variantSelect.appendChild(opt);
-    });
-  }
+    let img = document.createElement("img");
+    img.src = imgSrc;
+    img.classList.add("small-img");
 
-  // Add to Cart
-  const addBtn = document.getElementById("add-to-cart-btn");
-  const qtyInput = document.getElementById("quantity-input");
-
-  addBtn.addEventListener("click", () => {
-    const qty = Math.max(1, parseInt(qtyInput.value) || 1);
-    const selectedVariant =
-      variantSelect && variantSelect.value !== "Variants"
-        ? variantSelect.value
-        : null;
-
-    const cart = getCart();
-
-    // same product + same variant ko merge karo
-    const existing = cart.find(
-      (item) => item.id === product.id && item.variant === selectedVariant
-    );
-
-    if (existing) {
-      existing.quantity += qty;
-    } else {
-      cart.push({
-        id: product.id,
-        name: product.name,
-        image: product.image,
-        // Store numeric price for math + a display string if needed
-        price: parseINR(product.price),
-        priceDisplay: product.price,
-        quantity: qty,
-        variant: selectedVariant // may be null
-      });
-    }
-
-    setCart(cart);
-    alert("Added to cart!");
-    // Optional: redirect to cart
-    // window.location.href = "cart.html";
-  });
-}
-
-// ===========================
-// CART PAGE (cart.html)
-// ===========================
-function initCartPage() {
-  const cartSection = document.getElementById("cart");
-  if (!cartSection) return; // Not on cart page
-
-  const tbody = cartSection.querySelector("tbody");
-
-  function renderCart() {
-    const cart = getCart();
-    tbody.innerHTML = "";
-
-    if (cart.length === 0) {
-      tbody.innerHTML =
-        '<tr><td colspan="6" style="text-align:center; opacity:.7;">Your cart is empty</td></tr>';
-      updateTotals();
-      return;
-    }
-
-    cart.forEach((item, index) => {
-      const subtotal = item.price * item.quantity;
-
-      const tr = document.createElement("tr");
-      tr.className = "cart-item";
-      tr.innerHTML = `
-        <td><a href="#" class="remove-btn" data-index="${index}"><i class="far fa-times-circle"></i></a></td>
-        <td><img src="${item.image}" class="pro-img" alt=""></td>
-        <td class="pro-name">
-          ${item.name}
-          ${item.variant ? `<div style="font-size:12px;opacity:.7;">Variant: ${item.variant}</div>` : ""}
-        </td>
-        <td class="price">${item.priceDisplay || formatINR(item.price)}</td>
-        <td><input type="number" class="quantity" min="1" value="${item.quantity}" data-index="${index}"></td>
-        <td class="subtotal">${formatINR(subtotal)}</td>
-      `;
-      tbody.appendChild(tr);
+    img.addEventListener("click", () => {
+        document.getElementById("MainImg").src = imgSrc;
     });
 
-    updateTotals();
-  }
+    div.appendChild(img);
+    smallImgGroup.appendChild(div);
 
-  function updateTotals() {
-    const cart = getCart();
-    const total = cart.reduce((sum, it) => sum + it.price * it.quantity, 0);
-    const subCell = document.querySelector(
-      "#subtotal table tr:nth-child(1) td:nth-child(2)"
-    );
-    const totalCell = document.querySelector(
-      "#subtotal table tr:nth-child(3) td:nth-child(2)"
-    );
-    if (subCell) subCell.textContent = formatINR(total);
-    if (totalCell) totalCell.textContent = formatINR(total);
-  }
+});
 
-  // Quantity change (event delegation)
-  tbody.addEventListener("input", (e) => {
-    if (e.target.classList.contains("quantity")) {
-      const idx = parseInt(e.target.getAttribute("data-index"));
-      const val = Math.max(1, parseInt(e.target.value) || 1);
-      const cart = getCart();
-      if (cart[idx]) {
-        cart[idx].quantity = val;
-        setCart(cart);
-        renderCart();
-      }
-    }
-  });
+// Add variants
+let variantSelect = document.getElementById("variant-select");
+product.variants.forEach(variant => {
+    let option = document.createElement("option");
+    option.textContent = variant;
+    variantSelect.appendChild(option);
+});
 
-  // Remove item
-  tbody.addEventListener("click", (e) => {
-    const btn = e.target.closest(".remove-btn");
-    if (!btn) return;
-    e.preventDefault();
-    const idx = parseInt(btn.getAttribute("data-index"));
-    const cart = getCart();
-    cart.splice(idx, 1);
-    setCart(cart);
-    renderCart();
-  });
-
-  renderCart();
-}
-
-// ===========================
-// Init (both pages supported)
-// ===========================
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", () => {
-    initProductPage();
-    initCartPage();
-  });
-} else {
-  initProductPage();
-  initCartPage();
-}
