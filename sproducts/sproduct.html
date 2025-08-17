@@ -177,7 +177,7 @@
             document.getElementById("add-to-cart-btn").addEventListener("click", function(){
                 let id = product.id;
                 let name = product.name;
-                let img = product.image;
+                let img = product.image.replace('../','');
                 let price = product.price;
                 let qty = parseInt(document.getElementById("quantity-input").value);
                 let variant = document.getElementById("variant-select").value;
