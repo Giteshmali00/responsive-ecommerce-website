@@ -83,7 +83,7 @@ const products = [
    //---------Phones---------
    {
         id:5,
-        name: "Apple iPhone 16 (White, 128 GB)",
+        name: "Apple iPhone 16 (White)",
         price: "₹69,999",
         image: "../img/products/ph1.png",
         smallimgs: [
@@ -103,7 +103,7 @@ const products = [
    },
    {
         id:6,
-        name: "vivo X200 5G (Cosmos Black, 256 GB) (12 GB RAM)",
+        name: "vivo X200 5G (Cosmos Black)",
         price: "₹65,999",
         image: "../img/products/ph2.png",
         smallimgs: [
@@ -123,7 +123,7 @@ const products = [
     },
    {
         id:7,
-        name: "realme GT 7 Pro (Mars Orange, 512 GB) (16 GB RAM)",
+        name: "realme GT 7 Pro (Mars Orange)",
         price: "₹53,900",
         image: "../img/products/ph3.png",
         smallimgs: [
@@ -143,11 +143,11 @@ const products = [
     },
    {
         id:8,
-        name: "IQOO 13 5G (Nardo Grey, 512 GB) (16 GB RAM)",
+        name: "IQOO 13 5G",
         price: "₹59,999",
-        image: "../img/products/ph1.png",
+        image: "../img/products/ph4.png",
         smallimgs: [
-            "../img/products/ph1.png",
+            "../img/products/ph4.png",
             "../img/products/ph41.png",
             "../img/products/ph42.png",
             "../img/products/ph43.png"

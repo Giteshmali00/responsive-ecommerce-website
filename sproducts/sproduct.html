@@ -173,6 +173,48 @@
             </div>
         </footer>
 
+        <script>
+            document.getElementById("add-to-cart-btn").addEventListener("click", function(){
+                let id = product.id;
+                let name = product.name;
+                let img = product.image;
+                let price = product.price;
+                let qty = parseInt(document.getElementById("quantity-input").value);
+                let variant = document.getElementById("variant-select").value;
+
+                if(variant === "Variants"){
+                    alert("Please Select Variant..");
+                }
+                else{
+                    let procs = {
+                        id: id,
+                        name: name,
+                        price: price,
+                        img: img,
+                        variant: variant,
+                        qty: qty
+                    };
+
+                    let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+                    let found = false;
+
+                    cart.forEach(element => {
+                        if(element.id === procs.id && element.variant === procs.variant){
+                            element.qty = parseInt(element.qty) + parseInt(procs.qty);
+                            found = true;
+                        }
+                    });
+
+                    if(!found){
+                        cart.push(procs);
+                    }
+                    localStorage.setItem("cartItems", JSON.stringify(cart));
+
+                    alert("Item Added to Cart!");
+                }
+            });
+        </script>
         <script src="../script.js"></script>
     </body>
 </html>
