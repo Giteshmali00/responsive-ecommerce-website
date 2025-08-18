@@ -201,7 +201,7 @@
 
                     cart.forEach(element => {
                         if(element.id === procs.id && element.variant === procs.variant){
-                            element.qty = parseInt(element.qty) + parseInt(procs.qty);
+                            element.qty = parseInt(element.qty) + procs.qty;
                             found = true;
                         }
                     });

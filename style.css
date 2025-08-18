@@ -38,8 +38,8 @@ p{
 }
 
 .logo{
-    height: 40px; /* navbar ki height ke hisaab se adjust karo */
-    width: auto;  /* aspect ratio maintain karega */
+    height: 40px; 
+    width: auto; 
     object-fit: contain;
     display: block;
 }
@@ -117,15 +117,6 @@ body{
     left: 20px;
 }
 
-#mobile{
-    display: none;
-    align-items: center;
-}
-
-#close{
-    display: none;
-}
-
 #hero{
     background-image: url("img/ad1.jpg");
     height: 90vh;
@@ -148,8 +139,8 @@ body{
     background-image: url("img/shopBG.png");
     background-color: transparent;
     background-repeat: no-repeat;
-    background-position: center;      /* image ko center me rakhega */
-    background-size: 100% 100%;       /* pura fit karega button ke andar */
+    background-position: center;      
+    background-size: 100% 100%;     
     color: #088178;
     border: 0;
     padding: 14px 80px 14px 65px;
@@ -174,12 +165,11 @@ body{
     margin: 15px 0;
 }
 
-/* Image ke liye fixed height + object-fit */
 #feature .fe-box img {
     width: 100%;
-    height: 100px;       /* Sab images same height */
-    object-fit: contain; /* Crop nahi karega, proportion maintain karega */
-    margin-bottom: 10px; /* Text se gap */
+    height: 100px;       
+    object-fit: contain; 
+    margin-bottom: 10px;
 }
 
 #feature .fe-box:hover {
@@ -211,7 +201,6 @@ body{
 
 #product1{
     text-align: center;
-
 }
 #product1 .pro-container{
     display: flex;
@@ -493,26 +482,23 @@ footer .copyright{
     margin-top: 20px;
 }
 
-/* cp */
 .single-pro-image {
-    width: 400px; /* main image ka fixed width */
+    width: 400px; 
     height: fit-content;
 }
 
-/* Main product image */
 #MainImg {
-  width: 400px;       /* fix size */
+  width: 400px;    
   height: 400px;
-  object-fit: contain; /* ratio maintain rahega */
+  object-fit: contain; 
   padding: 5px;
   background: #fff;
   display: block;
   margin: 0 auto;
 }
 
-/* Small images container */
 .small-img {
-  width: 100px;       /* thumbnails ka fix size */
+  width: 100px; 
   height: 100px;
   object-fit: contain;
   border: 1px solid #ddd;
@@ -524,7 +510,7 @@ footer .copyright{
 
 .small-img-group {
     display: flex;
-    justify-content: flex-start; /* left align */
+    justify-content: flex-start;
     gap: 8px;
     margin-top: 10px;
     flex-wrap: wrap;
