@@ -43,6 +43,11 @@ p{
     object-fit: contain;
     display: block;
 }
+.invoice-logo{
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
 
 button.normal{
     font-size: 14px;
@@ -636,4 +641,129 @@ footer .copyright{
     background-color: #088178;
     color: #fff;
     padding: 12px 20px;
+}
+
+/* Address */
+#address form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#address input, textarea, button {
+    padding: 8px;
+    font-size: 14px;
+}
+#address button {
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+#address h4{
+    text-align: center;
+    padding-top: 60px;
+}
+
+.invoice-section-p1{
+    padding:10px 80px;
+}
+
+.invoice-sticker {
+    width: 200px;
+    position: absolute;
+    right: 200px; 
+    top: 0;
+}
+#invoice-address {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#invoice-cart table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+
+#invoice-cart table td:nth-child(1){
+    width: 150%;
+    text-align: center;
+}
+#invoice-cart table td:nth-child(2){
+    width: 100%;
+    text-align: center;
+}
+#invoice-cart table td:nth-child(3){
+    width: 100%;
+    text-align: center;
+}
+#invoice-cart table td:nth-child(4){
+    width: 150%;
+    text-align: center;
+}
+#invoice-cart table thead{
+    border: 1px solid #121212;
+    border-left: none;
+    border-right: none;
+}
+#invoice-cart table thead td{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 18px 0;
+}
+#invoice-cart table tbody tr td{
+    padding-top: 15px;
+}
+#invoice-cart table tbody td{
+    font-size: 13px;
+}
+/* #invoice-cart-hr hr{
+    width: 80%;
+    align-items: center;
+} */
+#invoice-cart-hr hr{
+    width: 100%;
+}
+#invoice-cart-hr{
+    padding-left: 20px ;
+    padding-right: 20px;
+}
+#invoice-subtotal{
+    width: 50%;
+    /* padding-left: 80%; */
+}
+#section-cart-add{
+    padding-left: 70%;
+}
+#invoice-subtotal table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+#invoice-subtotal table td{
+    width: 100%;
+    padding: 10px;
+    padding-left: 30px;
+    font-size: 13px;
+}
+#invoice-subtotal h3{
+    padding-bottom: 15px;
+}
+.invoice-details{
+    text-align:end;
+}
+#invoice-total div{
+    padding: 10px 0 10px 75%;
+}
+.download-btn {
+    background-color: #a6aaaa;
+    color: #fff;
+    padding: 12px 20px;
+    cursor: pointer;
 }

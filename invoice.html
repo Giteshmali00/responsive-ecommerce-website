@@ -1,0 +1,150 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>E-commerce Website</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    </head>
+    <body>
+
+        <div id="invoice-section">
+            <section id="company-name" class="invoice-section-p1">
+                <table>
+                    <tr>
+                        <td><img src="../img/logo.png" class="invoice-logo" alt="logo"></td>
+                        <td>Gizmokart</td>
+                    </tr>
+                </table>
+                <div class="invoice-info">
+                    <p id="invoiceNo">Invoice Number : </p>
+                    <p id="invoice-date">Date : </p>
+                </div>
+                <img src="img/invoiceSticker2.png" class="invoice-sticker" alt="">
+                <hr>
+            </section>
+
+            <section id="invoice-address" class="invoice-section-p1">
+                <div>
+                    <strong>Bill from:</strong>
+                    <P>Giz Electronics</p>
+                    <p>Shahada,Maharashtra,425410</p>
+                    <p>+91 1234567890</p>
+                    
+                </div>
+                <div>
+                    <strong>Bill to:</strong>
+                    <p id="cust-name"></p>
+                    <p id="cust-phone"></p>
+                    <p id="cust-email"></p>
+                    <p id="cust-address"></p>
+                </div>
+            </section>
+
+            <section id="invoice-cart" class="invoice-section-p1">
+                <table width="100%">
+                    <thead>
+                        <tr>
+                            <td>Item</td>
+                            <td>Rate</td>
+                            <td>Quantity</td>
+                            <td>Amount</td>
+                        </tr>
+                    </thead>
+                    <tbody id="invoice-cart-items">
+
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="section-cart-add">
+                <div id="invoice-subtotal">
+                    <table>
+                        <tr>
+                            <td>Subtotal: </td>
+                            <td id="main-cart-subtotal" class="invoice-details"></td>
+                        </tr>
+                        <tr>
+                            <td>Shipping: </td>
+                            <td class="invoice-details">Free</td>
+                        </tr>
+                        <tr>
+                            <td>Tax: </td>
+                            <td id="tax-amount" class="invoice-details"></td>
+                        </tr>
+                        <tr>
+                            <td>Paid: </td>
+                            <td class="invoice-details">0</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+
+            <section id="invoice-total" class="invoice-section-p1">
+                <hr>
+                <div id="cart-total">Total </div>
+            </section>
+             <button class="download-btn" onclick="downloadPDF()">Download Invoice</button>
+        </div>
+
+        <script>
+            let address = JSON.parse(localStorage.getItem("userAddress"));
+            if(address){
+                document.getElementById("cust-name").textContent = address.name;
+                document.getElementById("cust-phone").textContent = "Phone: " + address.phone;
+                document.getElementById("cust-email").textContent = "Email: " + address.email;
+                document.getElementById("cust-address").textContent =
+                "Address :" + address.city + ", " + address.state + " - " + address.pincode + ", " + address.country;
+            }
+
+            // Random number generator
+            function generateInvoiceNo() {
+            // Example: 100000 to 999999 range
+            return Math.floor(100000 + Math.random() * 900000);
+            }
+
+            // Set random invoice number on page load
+            document.getElementById("invoiceNo").textContent += generateInvoiceNo();
+
+            let today = new Date();
+            document.getElementById("invoice-date").innerText += today.toLocaleDateString();
+
+            let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+            let cartTable = document.getElementById("invoice-cart-items");
+
+            function renderCart(){
+                cartTable.innerHTML = "";
+                let cartSubtotal = 0;
+                cart.forEach(procs => {
+                    let st = procs.qty * parseInt(procs.price.replace(/\D/g,""));
+                    cartSubtotal += st;
+                    let uniqueKey = procs.id + "_" + procs.variant;
+
+                    const tr = document.createElement("tr");
+                    tr.className = "invoice-cart-item";
+                    tr.innerHTML = `
+                        <td id="cart-name" class="pro-name">${procs.name} ${procs.variant ? `<div style="font-size:12px;opacity:.7;">Variant: ${procs.variant}</div>` : ""}</td>
+                        <td id="cart-price" class="price">${procs.price}</td>
+                        <td id="cart-quantity" class="quantity">${procs.qty}</td>
+                        <td id="cart-subtotal" class="subtotal">₹${st.toLocaleString("en-IN")}</td>
+                    `;
+                    document.getElementById("invoice-cart-items").appendChild(tr);
+
+                    const hrRow = document.createElement("tr");
+                    hrRow.innerHTML = `<td colspan="4" id="invoice-cart-hr"><hr></td>`;
+                    document.getElementById("invoice-cart-items").appendChild(hrRow);
+                });
+                
+                let taxRate = 0.08;
+                let taxAmount = cartSubtotal * taxRate;
+                let total = cartSubtotal + taxAmount;
+
+                document.getElementById("main-cart-subtotal").textContent = "₹" + cartSubtotal.toLocaleString("en-IN");
+                document.getElementById("tax-amount").textContent = "₹" + taxAmount.toLocaleString("en-IN");
+                document.getElementById("cart-total").textContent += "₹" + total.toLocaleString("en-IN");
+            }
+            renderCart();
+        </script>
+    </body>
+</html>

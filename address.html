@@ -1,0 +1,64 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>E-commerce Website</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+        <style>
+        </style>
+    </head>
+    <body>
+        <section id="header">
+            <a href="#"><img src="../img/logo.png" class="logo" alt="logo"></a>
+            <div>
+                <ul id="navbar">
+                    <li><img src="https://constant.myntassets.com/checkout/assets/img/sprite-secure.png" alt="" width="26" height="28"></li>
+                    <li style="letter-spacing: 3px;">100% SECURE</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="address">
+            <h4>Shipping Address</h4>
+            <form id="address-form">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="tel" id="phone" placeholder="Phone Number" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <textarea id="address" placeholder="Full Address" required></textarea>
+                <input type="text" id="city" placeholder="City" required>
+                <input type="text" id="state" placeholder="State" required>
+                <input type="text" id="pincode" placeholder="Pincode" required>
+                <input type="text" id="country" placeholder="Country" required>
+
+                <button type="submit">Continue</button>
+            </form>
+        </section>
+        
+        <script>
+            document.getElementById("address-form").addEventListener("submit", function(e) {
+                e.preventDefault();
+
+                // collect data
+                const addressData = {
+                    name: document.getElementById("name").value,
+                    phone: document.getElementById("phone").value,
+                    email: document.getElementById("email").value,
+                    address: document.getElementById("address").value,
+                    city: document.getElementById("city").value,
+                    state: document.getElementById("state").value,
+                    pincode: document.getElementById("pincode").value,
+                    country: document.getElementById("country").value
+                };
+
+                // save in localStorage
+                localStorage.setItem("userAddress", JSON.stringify(addressData));
+
+                // redirect to invoice page
+                window.location.href = "invoice.html";
+            });
+        </script>
+        <script src="../script.js"></script>
+    </body>
+</html>
