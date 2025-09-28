@@ -767,3 +767,44 @@ footer .copyright{
     padding: 12px 20px;
     cursor: pointer;
 }
+
+/* Feedback Form */
+
+.feedback-container {
+    background-color: white;
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #aaa;
+}
+.feedback-container h2 {
+    text-align: center;
+    color: #333;
+}
+.feedback-container label {
+    display: block;
+    margin: 10px 0 5px;
+}
+.feedback-container input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.feedback-container textarea {
+    resize: vertical;
+}
+.feedback-container input[type="submit"] {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.feedback-container input[type="submit"]:hover {
+    background-color: #45a049;
+}
