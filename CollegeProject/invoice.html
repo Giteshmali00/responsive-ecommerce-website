@@ -124,7 +124,7 @@
                     const tr = document.createElement("tr");
                     tr.className = "invoice-cart-item";
                     tr.innerHTML = `
-                        <td id="cart-name" class="pro-name">${procs.name} ${procs.variant ? `<div style="font-size:12px;opacity:.7;">Variant: ${procs.variant}</div>` : ""}</td>
+                        <td id="cart-name" class="pro-name">${procs.name} ${`<div style="font-size:12px;opacity:.7;">Variant: ${procs.variant}</div>`}</td>
                         <td id="cart-price" class="price">${procs.price}</td>
                         <td id="cart-quantity" class="quantity">${procs.qty}</td>
                         <td id="cart-subtotal" class="subtotal">₹${st.toLocaleString("en-IN")}</td>
